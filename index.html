@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denis Rodriguez - Desarrollador Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Podrías considerar añadir un Favicon aquí en el futuro -->
+    <link rel="icon" href="Images/icon.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <!-- El contenedor ahora está DENTRO del header para que el fondo pueda ocupar todo el ancho -->
+        <div class="container">
+            <h1>Denis Rodriguez</h1>
+            <!-- El párrafo es un buen subtítulo o tagline -->
+            <p>Desarrollador web en formación, apasionado por crear experiencias digitales funcionales, atractivas y enfocadas en soluciones prácticas.</p>
+            <a href="mailto:denis.dev.04@gmail.com" class="btn">Contáctame</a>
+        </div>
+    </header>
+
+    <!-- Envolver el contenido principal en <main> es semánticamente correcto -->
+    <main>
+        <section id="about">
+            <!-- Aplicar la clase container directamente a la sección está bien si quieres que el fondo blanco también esté contenido -->
+            <div class="container">
+                <img src="Images/profile-pic.jpg" alt="Foto de perfil de Denis Rodriguez" class="profile-picture">
+                <h2>Sobre mí</h2>
+                <p>Soy Denis Rodriguez, un apasionado desarrollador web en formación, con un enfoque en crear experiencias digitales que sean tanto funcionales como atractivas. Mi misión es llevar las ideas al siguiente nivel, mediante soluciones prácticas y diseños intuitivos. Siempre en busca de aprender y mejorar, me especializo en frontend y automatización, creando aplicaciones que hacen la diferencia.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Proyectos Destacados</h2>
+                <!-- Usar una lista (ul) puede ser semánticamente mejor para una colección de proyectos, aunque divs está bien también -->
+                <div class="projects-grid"> <!-- Añadimos una clase contenedora para los proyectos para el layout -->
+                    <article class="project"> <!-- Usar <article> es bueno para contenido autocontenido como un proyecto -->
+                        <h3>Proyecto 1</h3>
+                        <p>Descripción breve y concisa del primer proyecto. Quizás mencionar tecnologías clave.</p>
+                        <!-- Podrías añadir un enlace al proyecto si existe -->
+                        <!-- <a href="#" class="btn-project">Ver más</a> -->
+                    </article>
+                    <article class="project">
+                        <h3>Proyecto 2</h3>
+                        <p>Descripción breve y concisa del segundo proyecto. ¿Qué problema resuelve?</p>
+                        <!-- <a href="#" class="btn-project">Ver más</a> -->
+                    </article>
+                    <!-- Puedes añadir más <article class="project"> aquí -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <!-- Enlaces a redes/perfiles -->
+            <div class="footer-links"> <!-- Añadido un div para agrupar enlaces -->
+                <a href="https://github.com/denisio04" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <!-- Puedes añadir más enlaces aquí, separados por un espacio, un pipe (|) o en una lista -->
+                <!-- Ejemplo: <a href="https://linkedin.com/in/tu_usuario" target="_blank" rel="noopener noreferrer">LinkedIn</a> -->
+            </div>
+            <!-- Copyright -->
+            <p>© 2025 Denis Rodriguez. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

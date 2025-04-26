@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+/* Reset básico y Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Globales */
+body {
+    /* Fuente principal más suave y moderna */
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7; /* Un poco más de espacio entre líneas */
+    background-color: #FFFDF8; /* Fondo general blanco cálido/crema pálido */
+    color: #4F4F4F; /* Texto principal gris oscuro cálido */
+    font-size: 16px; /* Tamaño base */
+}
+
+/* Contenedor Principal */
+.container {
+    width: 90%;
+    max-width: 1000px; /* Un poco más estrecho para sensación más contenida */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+header {
+    background-color: #4A5C6A; /* Azul pizarra profundo desaturado */
+    color: #F5F5F5; /* Texto claro blanco roto cálido */
+    padding: 70px 0; /* Más padding */
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif; /* Fuente elegante para el nombre */
+    font-size: 3rem; /* Tamaño ajustado */
+    margin-bottom: 15px;
+    color: #FFFFFF; /* Blanco más puro aquí para destacar el nombre */
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-bottom: 30px; /* Más espacio antes del botón */
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(245, 245, 245, 0.9); /* Texto claro con ligera transparencia */
+}
+
+/* Botón Principal (Header) */
+header .btn {
+    background-color: #F28B82; /* Acento Principal - Rosa coral suave */
+    padding: 14px 30px; /* Ligeramente más grande */
+    color: #FFFFFF; /* Texto blanco */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold; /* Mantenemos negrita */
+    border-radius: 30px; /* Botón más redondeado (píldora) */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    letter-spacing: 0.5px; /* Espacio entre letras */
+}
+
+header .btn:hover,
+header .btn:focus {
+    background-color: #A8DADC; /* Acento Secundario - Verde azulado suave en hover */
+    transform: translateY(-3px); /* Elevación ligeramente mayor */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra un poco más pronunciada */
+    color: #4A5C6A; /* Texto oscuro en hover para contraste con fondo claro */
+}
+
+/* Estilos generales para Main */
+main {
+    overflow: hidden; /* Ayuda a contener márgenes/sombras internas */
+}
+
+/* Enlaces generales (dentro del contenido principal) */
+main a {
+    color: #F28B82; /* Acento Principal - Rosa coral suave */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+main a:hover,
+main a:focus {
+    color: #4A5C6A; /* Azul pizarra en hover */
+    text-decoration: underline;
+}
+
+/* Sección Sobre Mí */
+#about {
+    background-color: #FFFFFF; /* Fondo blanco limpio */
+    padding: 60px 0;
+    text-align: center;
+    margin-top: 50px; /* Espacio después del header */
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 5px 25px rgba(74, 92, 106, 0.08); /* Sombra muy suave con color base */
+}
+
+#about h2 {
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+    color: #4A5C6A; /* Azul pizarra */
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0 auto;
+    color: #5F5F5F; /* Gris ligeramente más claro para el cuerpo */
+}
+
+/* Estilo para la foto de perfil */
+.profile-picture {
+    display: block;
+    width: 160px; /* Ligeramente más grande */
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 40px auto; /* Más margen inferior */
+    /* Borde sutil usando el color de acento secundario */
+    border: 5px solid #A8DADC;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Sección Proyectos */
+#projects {
+    padding: 70px 0; /* Más padding vertical */
+}
+
+#projects h2 {
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 50px; /* Más espacio */
+    color: #4A5C6A; /* Azul pizarra */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px; /* Un poco más de espacio */
+}
+
+.project {
+    background-color: #FFFFFF; /* Fondo blanco */
+    padding: 30px; /* Más padding interno */
+    border-radius: 12px; /* Bordes redondeados consistentes */
+    box-shadow: 0 5px 25px rgba(74, 92, 106, 0.08); /* Sombra muy suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Flexbox para alinear contenido interno si es necesario */
+    flex-direction: column;
+}
+
+.project:hover {
+    transform: translateY(-6px); /* Elevación más notable */
+    box-shadow: 0 10px 30px rgba(74, 92, 106, 0.12); /* Sombra más pronunciada */
+}
+
+/* Título de cada Proyecto */
+.project h3 {
+    font-family: 'Montserrat', sans-serif; /* Fuente estándar para títulos de proyecto */
+    font-weight: 700; /* Negrita */
+    font-size: 1.5rem;
+    color: #F28B82; /* Acento Principal - Rosa coral suave */
+    margin-bottom: 15px;
+}
+
+.project p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666666; /* Gris medio para la descripción */
+    flex-grow: 1; /* Empuja los elementos inferiores (como botones) hacia abajo */
+    margin-bottom: 20px; /* Espacio antes de posibles enlaces/botones dentro del proyecto */
+}
+
+/* Footer */
+footer {
+    background-color: #4A5C6A; /* Azul pizarra profundo desaturado */
+    color: rgba(245, 245, 245, 0.8); /* Texto claro con transparencia */
+    text-align: center;
+    padding: 50px 0; /* Padding generoso */
+    margin-top: 60px; /* Espacio antes del footer */
+    font-size: 0.9rem;
+}
+
+/* Footer Links */
+.footer-links {
+    margin-bottom: 20px; /* Más espacio */
+}
+
+.footer-links a {
+    color: #F5F5F5; /* Texto claro */
+    text-decoration: none;
+    margin: 0 12px; /* Un poco más de espacio entre enlaces */
+    transition: color 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 0.5px; /* Espacio entre letras */
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: #F28B82; /* Acento Principal - Rosa coral suave en hover */
+}
+
+footer p {
+    color: rgba(245, 245, 245, 0.7); /* Copyright un poco más tenue */
+    font-size: 0.85rem;
+    margin-top: 0;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Media Query para Responsividad (Ajustes menores) --- */
+@media (max-width: 768px) {
+    body {
+        font-size: 15px; /* Ligeramente más pequeño en móvil */
+    }
+
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    #about h2,
+    #projects h2 {
+        font-size: 2rem;
+    }
+
+    header, #about, #projects, footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .profile-picture {
+        width: 130px;
+        height: 130px;
+        border-width: 4px; /* Borde ligeramente más fino */
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        gap: 25px;
+    }
+}
