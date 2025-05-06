@@ -1,72 +1,185 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Denis Rodriguez - Desarrollador Web</title>
+    <title>Denis Rodriguez - Web Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="Images/icon.png" type="image/x-icon">
+    <!-- Link for Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Iconify for technology icons -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
 <body>
 
     <header>
-        <!-- El contenedor ahora está DENTRO del header para que el fondo pueda ocupar todo el ancho -->
         <div class="container">
-            <h1>Denis Rodriguez</h1>
-            <!-- El párrafo es un buen subtítulo o tagline -->
-            <p>Desarrollador web en formación, apasionado por crear experiencias digitales funcionales, atractivas y enfocadas en soluciones prácticas.</p>
-            <a href="mailto:denis.dev.04@gmail.com" class="btn">Contáctame</a>
+            <!-- Profile picture in the Header -->
+            <img src="Images/profile-pic.jpg" alt="Denis Rodriguez Profile Picture" class="profile-picture">
+
+            <h1>Denis Rodriguez</h1> <!-- Title stays the same -->
+            <!-- *** UPDATED SUBTITLE *** -->
+            <p>Web Developer | Building Fast, Effective Websites to Boost Your Online Presence</p>
+            <a href="mailto:denis.dev.04@gmail.com" class="btn">Contact Me</a>
         </div>
     </header>
 
-    <!-- Envolver el contenido principal en <main> es semánticamente correcto -->
     <main>
+        <!-- *** UPDATED ABOUT ME SECTION *** -->
         <section id="about">
-            <!-- Aplicar la clase container directamente a la sección está bien si quieres que el fondo blanco también esté contenido -->
             <div class="container">
-                <img src="Images/profile-pic.jpg" alt="Foto de perfil de Denis Rodriguez" class="profile-picture">
-                <h2>Sobre mí</h2>
-                <p>Soy Denis Rodriguez, un apasionado desarrollador web en formación, con un enfoque en crear experiencias digitales que sean tanto funcionales como atractivas. Mi misión es llevar las ideas al siguiente nivel, mediante soluciones prácticas y diseños intuitivos. Siempre en busca de aprender y mejorar, me especializo en frontend y automatización, creando aplicaciones que hacen la diferencia.</p>
+                <h2>Let's Build Your Digital Foundation</h2>
+                <p>
+                    I'm Denis Rodriguez, a web developer focused on creating impactful and high-performing websites that deliver tangible results for your business or project. My expertise lies in <strong>Frontend Development</strong>, crafting responsive, user-friendly interfaces with clean <strong>HTML, CSS, and JavaScript</strong> that look great on any device and effectively capture your audience's attention.
+                </p>
+                <p>
+                    My approach is practical and results-driven: I prioritize understanding your immediate needs to build <strong>fast, reliable web solutions</strong> that get you online quickly and start working for you right away. While I'm passionate about clean code and excellent user experiences, I also have a growing interest in <strong>Python for automation and data solutions</strong>, allowing me to think strategically about efficiency beyond the frontend.
+                </p>
+                <p>
+                    <strong>Ready to elevate your online presence? Let's talk about how a professional website can help you achieve your goals.</strong>
+                </p>
             </div>
         </section>
 
-        <section id="projects">
+        <!-- Skills Section - Structure remains the same -->
+        <section id="skills">
             <div class="container">
-                <h2>Proyectos Destacados</h2>
-                <!-- Usar una lista (ul) puede ser semánticamente mejor para una colección de proyectos, aunque divs está bien también -->
-                <div class="projects-grid"> <!-- Añadimos una clase contenedora para los proyectos para el layout -->
-                    <article class="project">
-                        <h3>Smart Mug Landing Page</h3>
-                        <p>
-                            Página de aterrizaje responsiva para un producto ficticio (taza inteligente). Creada con HTML/CSS y enfocada en un diseño cálido y pastel. Desplegada en GitHub Pages.
-                        </p>
-                        <!-- ENLACES IMPORTANTES -->
-                        <a href="https://denisio04.github.io/smart-mug-landing-page/" target="_blank" rel="noopener noreferrer" class="btn-project">Ver Demo</a>
-                        <a href="https://github.com/denisio04/smart-mug-landing-page" target="_blank" rel="noopener noreferrer" class="btn-project">Ver Código</a>
-                    </article>
-                    <article class="project">
-                        <h3>Clon Visual Tarjetas Airbnb</h3>
-                        <p>
-                            Réplica detallada de la cuadrícula de tarjetas de listado de Airbnb, utilizando HTML semántico y CSS Grid/Flexbox para un layout responsivo y fiel al original.
-                        </p>
-                        <a href="https://denisio04.github.io/airbnb-card-clone/" target="_blank" rel="noopener noreferrer" class="btn-project">Ver Demo</a>
-                        <a href="https://github.com/denisio04/airbnb-card-clone" target="_blank" rel="noopener noreferrer" class="btn-project">Ver Código</a>
-                    </article>
-                </div>    <!-- Puedes añadir más <article class="project"> aquí -->
+                <h2>My Skills</h2>
+                <div class="skills-section-content">
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <iconify-icon icon="devicon:html5" width="40" height="40"></iconify-icon>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <iconify-icon icon="devicon:css3" width="40" height="40"></iconify-icon>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <iconify-icon icon="devicon:javascript" width="40" height="40"></iconify-icon>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <iconify-icon icon="devicon:python" width="40" height="40"></iconify-icon>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <iconify-icon icon="devicon:git" width="40" height="40"></iconify-icon>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <iconify-icon icon="devicon:github" width="40" height="40"></iconify-icon>
+                            <span>GitHub</span>
+                        </div>
+                        <!-- Add more skills here -->
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!-- *** UPDATED PROJECTS SECTION *** -->
+        <section id="projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project">
+                        <img src="Images/smart-mug-preview.png" alt="Smart Mug Landing Page Project Preview">
+                        <div class="project-content">
+                            <h3>Smart Mug Landing Page</h3>
+                            <!-- *** UPDATED DESCRIPTION & WHY/CHALLENGES *** -->
+                            <p>
+                                Developed a fully responsive and interactive landing page for "EmberFlow," a fictional smart mug brand. The project focused on creating a modern user experience using <strong>HTML, CSS, and JavaScript</strong>. Key features include a dynamic product image carousel with autoplay and navigation controls, implemented with vanilla JavaScript. The primary goal was to build a visually appealing, single-page site showcasing the product effectively across all devices, deployed via <strong>GitHub Pages</strong>.
+                            </p>
+                            <!-- *** ADDED KEY TECHNOLOGIES *** -->
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>Responsive Design</span>
+                                <span>GitHub Pages</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://denisio04.github.io/smart-mug-landing-page/" target="_blank" rel="noopener noreferrer" class="btn-project">View Demo</a>
+                                <a href="https://github.com/denisio04/smart-mug-landing-page" target="_blank" rel="noopener noreferrer" class="btn-project">View Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project">
+                        <img src="Images/airbnb-clone-preview.png" alt="Airbnb Card Clone Project Preview">
+                        <div class="project-content">
+                            <h3>Airbnb Card Clone</h3>
+                             <!-- *** UPDATED DESCRIPTION & WHY/CHALLENGES *** -->
+                            <p>
+                                Recreated the iconic Airbnb listing card grid to master advanced <strong>CSS Grid</strong> and <strong>Flexbox</strong> layouts. The objective was to build a pixel-accurate, <strong>responsive replica</strong> using <strong>semantic HTML</strong>, focusing solely on frontend structure and styling. The main challenge involved precisely matching the complex alignment and responsive shifts of the original design.
+                            </p>
+                             <!-- *** ADDED KEY TECHNOLOGIES *** -->
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS Grid</span>
+                                <span>Flexbox</span>
+                                <span>Semantic HTML</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://denisio04.github.io/airbnb-card-clone/" target="_blank" rel="noopener noreferrer" class="btn-project">View Demo</a>
+                                <a href="https://github.com/denisio04/airbnb-card-clone" target="_blank" rel="noopener noreferrer" class="btn-project">View Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Add more <article class="project"> here -->
+                </div>
+            </div>
+        </section>
+    </section> <!-- Cierre de la sección #projects -->
+
+    <!-- *** NUEVA SECCIÓN DE CONTACTO *** -->
+    <section id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2> <!-- O "Contact Me", "Hablemos", etc. -->
+            <p class="contact-intro">
+                Have a project in mind, a question, or just want to connect? Fill out the form below, and I'll get back to you as soon as possible!
+            </p>
+
+            <!-- Formulario de contacto -->
+            <!-- ¡IMPORTANTE! Reemplaza 'YOUR_FORM_ID' con tu ID real de Formspree -->
+            <form id="contact-form" action="https://formspree.io/f/meoggqve" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject (Optional)">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
     </main>
 
     <footer>
         <div class="container">
-            <!-- Enlaces a redes/perfiles -->
-            <div class="footer-links"> <!-- Añadido un div para agrupar enlaces -->
-                <a href="https://github.com/denisio04" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <!-- Puedes añadir más enlaces aquí, separados por un espacio, un pipe (|) o en una lista -->
-                <!-- Ejemplo: <a href="https://linkedin.com/in/tu_usuario" target="_blank" rel="noopener noreferrer">LinkedIn</a> -->
+            <div class="footer-links">
+                <a href="https://github.com/denisio04" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <!-- Consider adding LinkedIn here if you have one -->
+                <!-- <a href="https://linkedin.com/in/your_username" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a> -->
             </div>
-            <!-- Copyright -->
-            <p>© 2025 Denis Rodriguez. Todos los derechos reservados.</p>
+            <p>© 2025 Denis Rodriguez. All rights reserved.</p>
         </div>
     </footer>
 

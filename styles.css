@@ -9,105 +9,133 @@
 
 /* Estilos Globales */
 body {
-    /* Fuente principal más suave y moderna */
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.7; /* Un poco más de espacio entre líneas */
-    background-color: #FFFDF8; /* Fondo general blanco cálido/crema pálido */
-    color: #4F4F4F; /* Texto principal gris oscuro cálido */
-    font-size: 16px; /* Tamaño base */
+    line-height: 1.7;
+    background-color: #fdfbf3;
+    color: #4F4F4F;
+    font-size: 16px;
 }
 
 /* Contenedor Principal */
 .container {
     width: 90%;
-    max-width: 1000px; /* Un poco más estrecho para sensación más contenida */
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
 /* Header */
 header {
-    background-color: #4A5C6A; /* Azul pizarra profundo desaturado */
-    color: #F5F5F5; /* Texto claro blanco roto cálido */
-    padding: 70px 0; /* Más padding */
+    background-color: #4A5C6A; /* Fallback color */
+    color: #F5F5F5;
+    padding: 70px 0; /* Padding generoso */
     text-align: center;
+
+    /* --- Estilos para la imagen de fondo --- */
+    background:
+        linear-gradient(to bottom, rgba(74, 92, 106, 0.3), rgba(74, 92, 106, 0.3)),
+        url('Images/header-background.png'); /* <-- ASEGÚRATE DE ESTA RUTA */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius:0px 0px 14px 14px ;
+    /* background-attachment: fixed; */
+    /* --------------------------------------------------- */
+}
+
+/* Estilo para la foto de perfil (EN EL HEADER) */
+.profile-picture {
+    display: block;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 30px auto; /* 0 arriba, auto lados (centrado), 30px abajo */
+    border: 5px solid #A8DADC;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-family: 'Playfair Display', serif; /* Fuente elegante para el nombre */
-    font-size: 3rem; /* Tamaño ajustado */
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
     margin-bottom: 15px;
-    color: #FFFFFF; /* Blanco más puro aquí para destacar el nombre */
+    color: #FFFFFF;
     font-weight: 700;
+    /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); */
 }
 
 header p {
     font-size: 1.1rem;
-    margin-bottom: 30px; /* Más espacio antes del botón */
+    line-height: 1.7;
+    margin-bottom: 30px;
     max-width: 550px;
     margin-left: auto;
     margin-right: auto;
-    color: rgba(245, 245, 245, 0.9); /* Texto claro con ligera transparencia */
+    color: rgba(245, 245, 245, 0.9);
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); */
 }
 
 /* Botón Principal (Header) */
 header .btn {
-    background-color: #F28B82; /* Acento Principal - Rosa coral suave */
-    padding: 14px 30px; /* Ligeramente más grande */
-    color: #FFFFFF; /* Texto blanco */
+    background-color: #F28B82;
+    padding: 14px 30px;
+    color: #FFFFFF;
     text-decoration: none;
     font-size: 1rem;
-    font-weight: bold; /* Mantenemos negrita */
-    border-radius: 30px; /* Botón más redondeado (píldora) */
+    font-weight: bold;
+    border-radius: 30px;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     display: inline-block;
     border: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    letter-spacing: 0.5px; /* Espacio entre letras */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
 }
 
 header .btn:hover,
 header .btn:focus {
-    background-color: #A8DADC; /* Acento Secundario - Verde azulado suave en hover */
-    transform: translateY(-3px); /* Elevación ligeramente mayor */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra un poco más pronunciada */
-    color: #4A5C6A; /* Texto oscuro en hover para contraste con fondo claro */
+    background-color: #A8DADC;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    color: #4A5C6A;
 }
 
 /* Estilos generales para Main */
 main {
-    overflow: hidden; /* Ayuda a contener márgenes/sombras internas */
+    overflow: hidden;
 }
 
 /* Enlaces generales (dentro del contenido principal) */
-main a {
-    color: #F28B82; /* Acento Principal - Rosa coral suave */
+main a:not(.btn):not(.btn-project) {
+    color: #F28B82;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-main a:hover,
-main a:focus {
-    color: #4A5C6A; /* Azul pizarra en hover */
+main a:not(.btn):not(.btn-project):hover,
+main a:not(.btn):not(.btn-project):focus {
+    color: #4A5C6A;
     text-decoration: underline;
 }
 
+
 /* Sección Sobre Mí */
 #about {
-    background-color: #FFFFFF; /* Fondo blanco limpio */
+    background-color: #FFFFFF;
     padding: 60px 0;
     text-align: center;
-    margin-top: 50px; /* Espacio después del header */
-    border-radius: 12px; /* Bordes más redondeados */
-    box-shadow: 0 5px 25px rgba(74, 92, 106, 0.08); /* Sombra muy suave con color base */
+    /* Ajusta el margen superior para separarla del header */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    box-shadow: 0 5px 25px rgba(74, 92, 106, 0.08);
 }
 
 #about h2 {
-    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    font-family: 'Playfair Display', serif;
     font-size: 2.4rem;
     margin-bottom: 25px;
-    color: #4A5C6A; /* Azul pizarra */
+    color: #4A5C6A;
 }
 
 #about p {
@@ -115,104 +143,225 @@ main a:focus {
     line-height: 1.8;
     max-width: 650px;
     margin: 0 auto;
-    color: #5F5F5F; /* Gris ligeramente más claro para el cuerpo */
+    color: #5F5F5F;
 }
 
-/* Estilo para la foto de perfil */
-.profile-picture {
-    display: block;
-    width: 160px; /* Ligeramente más grande */
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto 40px auto; /* Más margen inferior */
-    /* Borde sutil usando el color de acento secundario */
-    border: 5px solid #A8DADC;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+/* Sección Habilidades */
+/* Quitamos el padding vertical de #skills porque el nuevo contenedor interno lo tendrá */
+#skills {
+    background-color: #FFFFFF;
+    padding: 0; /* Quitamos el padding */
+    padding-top: 70px; /* Mantenemos solo el padding superior para separarla de la sección anterior */
+    padding-bottom: 70px; /* Mantenemos solo el padding inferior para separarla de la sección siguiente */
+    text-align: center;
+    border-radius: 14px;
+    box-shadow: 0 5px 25px rgba(74, 92, 106, 0.08);
+    margin-bottom: 20px;
 }
+
+/* --- ESTILOS PARA EL NUEVO CONTENEDOR INTERNO --- */
+.skills-section-content {
+    max-width: 900px; /* Ancho máximo para que no ocupe todo el ancho del container */
+    margin: 0 auto; /* Centra este contenedor */
+    padding: 40px 30px; /* Padding interno para separar el contenido de los bordes del contenedor */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 8px 30px rgba(74, 92, 106, 0.15); /* Sombra más pronunciada */
+
+    /* --- Fondo de Imagen con Degradado para contraste --- */
+    background:
+        /* Capa de degradado oscuro sobre la imagen para legibilidad del texto */
+        linear-gradient(to bottom, rgba(74, 92, 106, 0.75), rgba(74, 92, 106, 0.95)),
+        /* Tu imagen de fondo de código - ¡REEMPLAZA LA RUTA! */
+        url('Images/header-background1.jpg'); /* <-- ASEGÚRATE DE ESTA RUTA Y LA IMAGEN */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; /* Opcional: fija el fondo al hacer scroll */
+    /* --------------------------------------------------- */
+
+    /* Asegura que los elementos internos (h2, skills-grid) no desborden */
+    overflow: hidden;
+}
+
+
+#skills h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    /* Color blanco para contrastar con el fondo oscuro */
+    color: #4A5C6A;
+    /* Opcional: sombra de texto sutil si la imagen de fondo es muy detallada */
+    /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); */
+}
+
+.skills-grid {
+    display: grid;
+    /* Ajusta minmax según prefieras el tamaño, 120px es un buen tamaño para iconos + texto */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px; /* Espacio entre habilidades */
+    /* Ya no necesitamos max-width ni margin auto aquí, el contenedor .skills-section-content lo gestiona */
+    /* max-width: 800px; */
+    /* margin: 0 auto; */
+    /* padding: 0 20px; /* Mantenemos padding si el grid no llena el contenedor */
+}
+
+.skill-item {
+    /* Fondo blanco para que las tarjetas de habilidad destaquen sobre el fondo oscuro */
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(74, 92, 106, 0.05);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    /* Color para el texto de la habilidad (vuelve a ser oscuro sobre fondo blanco) */
+    color: #4A5C6A;
+    font-size: 0.95rem;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(74, 92, 106, 0.1);
+}
+
+.skill-item img, .skill-item .iconify {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    /* Color de acento para los iconos */
+    color: #F28B82;
+}
+
 
 /* Sección Proyectos */
 #projects {
-    padding: 70px 0; /* Más padding vertical */
+    background-color: #FFFFFF;
+    padding: 70px 0;
+    border-radius: 14px;
+    box-shadow: 0 5px 25px rgba(74, 92, 106, 0.08);
+
 }
 
 #projects h2 {
-    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    font-family: 'Playfair Display', serif;
     text-align: center;
     font-size: 2.4rem;
-    margin-bottom: 50px; /* Más espacio */
-    color: #4A5C6A; /* Azul pizarra */
+    margin-bottom: 50px;
+    color: #4A5C6A;
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 35px; /* Un poco más de espacio */
+    gap: 35px;
 }
 
 .project {
-    background-color: #FFFFFF; /* Fondo blanco */
-    padding: 30px; /* Más padding interno */
-    border-radius: 12px; /* Bordes redondeados consistentes */
-    box-shadow: 0 5px 25px rgba(74, 92, 106, 0.08); /* Sombra muy suave */
+    background-color: #fdfbfb;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(74, 92, 106, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex; /* Flexbox para alinear contenido interno si es necesario */
+    display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .project:hover {
-    transform: translateY(-6px); /* Elevación más notable */
-    box-shadow: 0 10px 30px rgba(74, 92, 106, 0.12); /* Sombra más pronunciada */
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(74, 92, 106, 0.12);
 }
 
-/* Título de cada Proyecto */
+.project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 20px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
 .project h3 {
-    font-family: 'Montserrat', sans-serif; /* Fuente estándar para títulos de proyecto */
-    font-weight: 700; /* Negrita */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     font-size: 1.5rem;
-    color: #F28B82; /* Acento Principal - Rosa coral suave */
-    margin-bottom: 15px;
+    color: #F28B82;
+    margin-bottom: 10px;
 }
 
 .project p {
     font-size: 1rem;
     line-height: 1.7;
-    color: #666666; /* Gris medio para la descripción */
-    flex-grow: 1; /* Empuja los elementos inferiores (como botones) hacia abajo */
-    margin-bottom: 20px; /* Espacio antes de posibles enlaces/botones dentro del proyecto */
+    color: #666666;
+    flex-grow: 1;
+    margin-bottom: 20px;
 }
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.btn-project {
+    background-color: #A8DADC;
+    color: #4A5C6A;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    border: 1px solid #A8DADC;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.btn-project:hover {
+    background-color: #4A5C6A;
+    color: #F5F5F5;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
 
 /* Footer */
 footer {
-    background-color: #4A5C6A; /* Azul pizarra profundo desaturado */
-    color: rgba(245, 245, 245, 0.8); /* Texto claro con transparencia */
+    background-color: #4A5C6A;
+    border-radius: 14px 14px 0 0;
+    color: rgba(245, 245, 245, 0.8);
     text-align: center;
-    padding: 50px 0; /* Padding generoso */
-    margin-top: 60px; /* Espacio antes del footer */
+    padding: 50px 0;
+    margin-top: 20px;
     font-size: 0.9rem;
 }
 
-/* Footer Links */
 .footer-links {
-    margin-bottom: 20px; /* Más espacio */
+    margin-bottom: 20px;
 }
 
 .footer-links a {
-    color: #F5F5F5; /* Texto claro */
+    color: #F5F5F5;
     text-decoration: none;
-    margin: 0 12px; /* Un poco más de espacio entre enlaces */
+    margin: 0 12px;
     transition: color 0.3s ease;
     font-weight: bold;
-    letter-spacing: 0.5px; /* Espacio entre letras */
+    letter-spacing: 0.5px;
 }
 
 .footer-links a:hover,
 .footer-links a:focus {
-    color: #F28B82; /* Acento Principal - Rosa coral suave en hover */
+    color: #F28B82;
 }
 
 footer p {
-    color: rgba(245, 245, 245, 0.7); /* Copyright un poco más tenue */
+    color: rgba(245, 245, 245, 0.7);
     font-size: 0.85rem;
     margin-top: 0;
 }
@@ -223,7 +372,7 @@ footer .container {
     align-items: center;
 }
 
-/* --- Media Query para Responsividad (Ajustes menores) --- */
+/* --- Media Query para Responsividad --- */
 @media (max-width: 768px) {
     body {
         font-size: 15px; /* Ligeramente más pequeño en móvil */
@@ -234,6 +383,7 @@ footer .container {
     }
 
     #about h2,
+    #skills h2, /* Ajustamos el tamaño del h2 de habilidades aquí también */
     #projects h2 {
         font-size: 2rem;
     }
@@ -243,14 +393,231 @@ footer .container {
         padding-bottom: 50px;
     }
 
+    /* Ajustes para el padding de la sección skills en móvil */
+    #skills {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    /* Ajustes para el contenedor interno de skills en móvil */
+    .skills-section-content {
+        padding: 30px 20px; /* Reduce el padding interno */
+    }
+
+
+    /* Estilo para la foto de perfil en móvil (EN HEADER) */
     .profile-picture {
         width: 130px;
         height: 130px;
-        border-width: 4px; /* Borde ligeramente más fino */
+        border-width: 4px;
+        margin-bottom: 25px;
     }
 
+    .skills-grid {
+         /* Ajusta minmax para tablet/móvil, quizás 100px */
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 15px;
+         /* Ya no necesitamos padding aquí */
+         /* padding: 0; */
+    }
+
+    /* Ajuste para el margen inferior del h2 de skills en móvil */
+    #skills h2 {
+        margin-bottom: 30px;
+    }
+
+
     .projects-grid {
-        grid-template-columns: 1fr; /* Una columna en móviles */
+        grid-template-columns: 1fr;
         gap: 25px;
+    }
+
+    .project-content {
+        padding: 15px 20px 20px;
+    }
+
+    .project h3 {
+        font-size: 1.3rem;
+    }
+
+    .project p {
+        font-size: 0.95rem;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .btn-project {
+        text-align: center;
+    }
+
+    .footer-links a {
+        margin: 0 8px;
+    }
+}
+
+/* Media Query adicional para pantallas muy pequeñas si es necesario */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    #about h2, #skills h2, #projects h2 {
+        font-size: 1.8rem;
+    }
+    .skills-grid {
+         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Aún más pequeñas en pantallas muy chicas */
+    }
+    .skills-section-content {
+        padding: 25px 15px; /* Reduce aún más el padding interno */
+    }
+}
+
+/* Add this towards the end of your styles.css file,
+   maybe after the .project-links styles */
+
+.project-tech {
+    margin-top: 15px; /* Space after the description */
+    margin-bottom: 20px; /* Space before the buttons */
+    flex-grow: 0; /* Prevent this div from expanding if description is short */
+}
+
+.project-tech span {
+    display: inline-block; /* Allow tags to sit side-by-side */
+    background-color: #e8e8e8; /* Light grey background */
+    color: #4A5C6A; /* Dark text, matching theme */
+    padding: 4px 10px; /* Small padding */
+    border-radius: 12px; /* Rounded corners for pill shape */
+    font-size: 0.85rem; /* Slightly smaller font */
+    margin-right: 6px; /* Space between tags */
+    margin-bottom: 6px; /* Space if tags wrap to next line */
+    font-weight: 500; /* Medium weight */
+    line-height: 1.4; /* Adjust line height for wrapped tags */
+    cursor: default;
+}
+
+/* Optional: Add a hover effect for the tags */
+.project-tech span:hover {
+    background-color: #dcdcdc; /* Slightly darker grey on hover */
+}
+
+/* Ensure the main project paragraph can still grow */
+.project-content p {
+    flex-grow: 1; /* Make sure the description takes available space */
+    /* Remove margin-bottom from here if it conflicts with .project-tech margin-top */
+    /* margin-bottom: 20px; <-- You might need to remove or adjust this */
+}
+/* --- Estilos para la Sección de Contacto --- */
+#contact {
+    background-color: #fdfbfb; /* Un fondo ligeramente diferente o el mismo que #projects */
+    padding: 70px 0;
+    border-radius: 14px;
+    box-shadow: 0 5px 25px rgba(74, 92, 106, 0.08);
+    margin-top: 20px; /* Espacio antes del footer */
+}
+
+#contact h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 20px; /* Menos espacio que en projects */
+    color: #4A5C6A;
+}
+
+#contact .contact-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px auto; /* Centrado y con espacio debajo */
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #5F5F5F;
+}
+
+#contact-form {
+    max-width: 650px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario */
+    display: grid; /* Usar grid para alinear fácil */
+    gap: 20px; /* Espacio entre elementos del formulario */
+}
+
+.form-group label {
+    display: block; /* Label encima del input */
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #4A5C6A;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif; /* Asegura consistencia de fuente */
+    background-color: #FFFFFF;
+    color: #4F4F4F;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #A8DADC; /* Color de acento al enfocar */
+    box-shadow: 0 0 0 3px rgba(168, 218, 220, 0.3); /* Sombra sutil al enfocar */
+}
+
+.form-group textarea {
+    resize: vertical; /* Permitir redimensionar verticalmente */
+    min-height: 120px; /* Altura mínima */
+}
+
+/* Estilo para el botón de envío - usando la clase .btn existente */
+#contact-form .btn {
+    background-color: #F28B82; /* Usa el color del botón principal */
+    padding: 14px 30px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    display: inline-block; /* O 'block' si quieres ancho completo */
+    width: auto; /* O '100%' si es display block */
+    margin: 0 auto; /* Centrar si es inline-block */
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+    cursor: pointer; /* Cursor de mano para el botón */
+    justify-self: center; /* Centra el botón si usas Grid en el form */
+}
+
+#contact-form .btn:hover,
+#contact-form .btn:focus {
+    background-color: #A8DADC; /* Mismo hover que el botón del header */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    color: #4A5C6A;
+}
+
+/* Ajustes para móvil en la sección de contacto */
+@media (max-width: 768px) {
+    #contact {
+        padding: 50px 0;
+    }
+    #contact h2 {
+        font-size: 2rem;
+    }
+    #contact .contact-intro {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    #contact-form {
+        gap: 15px;
     }
 }
