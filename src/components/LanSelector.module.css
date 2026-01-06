@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    gap: 0.7rem;
+    position: absolute;
+    top: 0.6rem;
+    left: 2rem;
+}
+
+.inputBox {
+    appearance: none; 
+    -webkit-appearance: none;
+    width: 0.6rem;
+    height: 0.6rem;
+    border: 1px solid var(--text-color); 
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-right: 0.4rem;
+}
+
+.inputBox:checked {
+    background-color: var(--text-color);
+}
+
+.box {
+    font-size: 0.8rem;
+}
+
+
+@media  (max-width: 768px) {
+
+    .container {
+        top: 0.4rem;
+        gap: 0.7rem;
+    }
+}

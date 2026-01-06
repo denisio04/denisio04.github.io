@@ -1,0 +1,204 @@
+#contact {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 4rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    gap: 2rem;
+    overflow-y: hidden;
+}
+
+/* --- HEADER --- */
+.tag {
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: var(--tag-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    line-height: 0.9;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.hollow {
+    font-family: sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--border-color);
+    transition: all 0.5s ease;
+}
+
+.hollow:hover {
+    color: var(--accent-color); 
+    -webkit-text-stroke: 0px;
+}
+
+/* --- MAIN ACTION  --- */
+.mainAction {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+    padding: 2rem 0;
+}
+
+.actionText {
+    font-family: monospace;
+    color: var(--tag-color);
+    margin-bottom: 1rem;
+}
+
+.emailBox {
+    text-decoration: none; 
+    color: inherit; 
+    cursor: pointer; 
+    transition: transform 0.2s ease;
+    display: block; 
+    width: fit-content;
+}
+
+.emailBox:hover {
+    transform: translateX(10px); 
+}
+
+.emailBox:hover .emailText {
+    color: var(--accent-color);
+}
+
+.emailText {
+    display: block;
+    font-size: clamp(2rem, 6vw, 6rem); 
+    font-weight: 800;
+    word-break: break-all;
+    line-height: 1;
+}
+
+.copyLabel {
+    display: block;
+    font-family: monospace;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: var(--tag-color);
+    text-transform: uppercase;
+}
+
+/* --- INFO GRID (ABAJO) --- */
+.infoGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 2rem;
+}
+
+.infoCol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.colTitle {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--tag-color);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.link:hover {
+    border-bottom: 1px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.text {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.statusBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #00cc00; 
+    border-radius: 50%;
+    box-shadow: 0 0 5px #00cc00;
+}
+
+.nextSectionBtn {
+    position: absolute; 
+    top: 3rem;          
+    right: 3rem;  
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer; 
+    transition: transform 0.3s ease;
+}
+
+.btnText {
+    font-family: monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.arrow {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.nextSectionBtn:hover {
+    transform: translateX(10px);
+    color: var(--accent-color);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    #contact {
+        padding: 1.5rem;
+        overflow-y: auto;
+    }
+
+    .mainAction {
+        padding: 0;
+    }
+
+    .title { font-size: 2.5rem; }
+
+    .infoGrid {
+        grid-template-columns: 1fr; 
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .emailText {
+        font-size: 2.5rem;
+    }
+
+    .nextSectionBtn {
+        top: 1.3rem;
+        right: 1.5rem;
+    }
+}

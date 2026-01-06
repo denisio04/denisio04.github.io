@@ -1,0 +1,171 @@
+#home {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+.introLabel {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    display: flex;
+    gap: 1rem;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--tag-color);
+    letter-spacing: 0.05em;
+}
+
+.nameContainer {
+    position: absolute;
+    top: 5rem;
+    left: 3rem;
+    z-index: 2;
+    mix-blend-mode: difference; 
+}
+
+.firstName, .lastName {
+    font-size: clamp(1rem, 13vw, 2rem);
+    line-height: 0.85;
+    font-weight: 400; 
+    margin: 0;
+    letter-spacing: -0.04em; 
+    cursor: default;
+    transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.lastName {
+    margin-left: 5vw; 
+    color: var(--text-color);
+}
+
+.nameContainer:hover .firstName {
+    transform: translateX(20px);
+    color: var(--accent-color); 
+}
+
+.nameContainer:hover .lastName {
+    transform: translateX(-20px);
+}
+
+.heroText {
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 800; 
+    line-height: 6rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -2px; 
+    color: var(--text-color);
+}
+
+.outlineText {
+    font-family: sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.heroText:hover .outlineText {
+    color: var(--accent-color); 
+    -webkit-text-stroke: 0px;
+}
+
+.footerInfo {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    right: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--text-color);
+}
+
+.roleBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: left;
+}
+
+.nextSectionBtn {
+    position: absolute; 
+    top: 3rem;          
+    right: 3rem;  
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer; 
+    transition: transform 0.3s ease;
+}
+
+.btnText {
+    font-family: monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.arrow {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.nextSectionBtn:hover {
+    transform: translateX(10px); 
+    color: var(--accent-color);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    #home {
+        padding: 1.5rem;
+        justify-content: center;
+        overflow-y: auto;
+    }
+
+    .heroText {
+        font-size: clamp(3rem, 8vw, 7rem);
+        line-height: 3rem;
+    }
+
+    .introLabel {
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .footerInfo {
+        bottom: 1.5rem;
+        left: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .lastName {
+        margin-left: 2rem; 
+    }
+    
+    .nameContainer {
+        top: 3rem;
+        left: 1.5rem;
+    }
+
+    .nameContainer:hover .firstName,
+    .nameContainer:hover .lastName {
+        transform: none; 
+    }
+
+    .nextSectionBtn {
+        top: 1.3rem;
+        right: 1.5rem;
+    }
+}  

@@ -1,0 +1,29 @@
+.pageFrame { 
+    position: absolute;
+    border: 1px solid var(--border-color);
+    left: max(20px , 4vmin);
+    right: max(20px, 4vmin);
+    top: max(20px, 4vmin);
+    bottom: max(20px, 4vmin);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+@media (max-width: 768px) {
+    .pageFrame {
+        position: absolute; 
+        border: 1px solid var(--border-color);
+        left: max(20px , 4vmin);
+        right: max(20px, 4vmin);
+        top: max(20px, 4vmin);
+        bottom: max(25px, 4vmin);
+        z-index: 1;  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: auto; 
+    }
+}

@@ -1,0 +1,23 @@
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: transparent; 
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%); 
+    pointer-events: none; 
+    z-index: 999; 
+}
+
+.pointer { 
+    transform: translate(-50%, -50%) scale(1.5); 
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .cursor {
+        display: none;
+    }
+}
