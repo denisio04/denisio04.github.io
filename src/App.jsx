@@ -17,7 +17,7 @@ function App() {
     return false;
   });
 
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   const [language, setLanguage] = useState('en');
 
