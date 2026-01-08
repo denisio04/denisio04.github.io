@@ -1,4 +1,4 @@
-import { useState } from 'react'; 
+import { useState, useEffect } from 'react'; 
 import './App.css';
 import BottomRight from './components/BottomRight';
 import PageFrame from './components/PageFrame';
@@ -22,6 +22,10 @@ function App() {
   const [language, setLanguage] = useState('en');
 
   const t = translations[language];
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
 
   return (
     <div className="app-container" data-theme={theme}>
