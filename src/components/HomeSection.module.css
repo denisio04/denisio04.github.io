@@ -58,7 +58,7 @@
 }
 
 .heroText {
-    font-size: clamp(3rem, 8vw, 7rem);
+    font-size: clamp(2.5rem, 8vw, 7rem);
     font-weight: 800; 
     line-height: 6rem;
     text-align: center;
@@ -135,8 +135,12 @@
     }
 
     .heroText {
-        font-size: clamp(3rem, 8vw, 7rem);
-        line-height: 3rem;
+        font-size: clamp(2rem, 10vw, 3.5rem);
+        line-height: 1.1;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        width: 100%;
     }
 
     .introLabel {
@@ -165,7 +169,11 @@
     }
 
     .nextSectionBtn {
-        top: 1.3rem;
-        right: 1.5rem;
+        display: none;
+    }
+    
+    .outlineText {
+        color: var(--accent-color);
+        -webkit-text-stroke: 0px;
     }
 }  

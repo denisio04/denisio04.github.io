@@ -10,14 +10,18 @@ function Cursor({ forceHover }) {
             setPosition({ x: e.clientX, y: e.clientY });
 
             const target = e.target;
-            
+
+            if (!target || !target.tagName) {
+                return; 
+            }
+
             const isClickable = 
                 target.tagName.toLowerCase() === 'a' ||
                 target.tagName.toLowerCase() === 'button' ||
-                target.closest('a') ||
-                target.closest('button');
+                (target.closest && target.closest('a')) ||     
+                (target.closest && target.closest('button'));   
 
-            setIsPointer(isClickable);
+            setIsPointer(!!isClickable); 
         };
 
         window.addEventListener('mousemove', handleMouseMove);
@@ -31,11 +35,11 @@ function Cursor({ forceHover }) {
 
     return (
         <div 
-            
             className={`${styles.cursor} ${active ? styles.pointer : ''}`}
             style={{ 
                 left: `${position.x}px`, 
-                top: `${position.y}px` 
+                top: `${position.y}px`,
+                pointerEvents: 'none' 
             }}
         />
     );

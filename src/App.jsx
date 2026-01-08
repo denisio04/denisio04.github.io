@@ -10,7 +10,12 @@ import LanSelector from './components/LanSelector';
 function App() {
   const [activeSection, setActiveSection] = useState('home');
 
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth <= 768; 
+    }
+    return false;
+  });
 
   const [theme, setTheme] = useState('light');
 

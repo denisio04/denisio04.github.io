@@ -44,14 +44,17 @@ function AboutSection( {onNavigate, t} ) {
                 </div>
 
                 <div className={styles.stats}>
-                    <div>
-                        <span className={styles.statNumber}>01</span>
-                        <span className={styles.statLabel}>{t.stats.years}</span>
+                    <div className={styles.statsElements}>
+                        <div>
+                            <span className={styles.statNumber}>01</span>
+                            <span className={styles.statLabel}>{t.stats.years}</span>
+                        </div>
+                        <div>
+                            <span className={styles.statNumber}>02</span>
+                            <span className={styles.statLabel}>{t.stats.projects}</span>
+                        </div>
                     </div>
-                    <div>
-                        <span className={styles.statNumber}>02</span>
-                        <span className={styles.statLabel}>{t.stats.projects}</span>
-                    </div>
+                        
 
                     <a 
                         href="/CV_Denis_Rodriguez_Frontend_Dev.pdf" 

@@ -141,6 +141,11 @@
     padding-top: 1rem;
 }
 
+.statsElements {
+    display: flex;
+    gap: 3rem;
+}
+
 .statNumber {
     display: block;
     font-weight: bold;
@@ -216,22 +221,39 @@
     }
 
     .stats {
+        flex-direction: column;
         order: 4;
         width: 100%;
-        justify-content: space-between; 
+        gap: 1rem;
+        align-items: center;
     }
     
+    .statsElements {
+        justify-content: space-around;
+    }
+
+    .statNumber {
+        text-align: center;
+    }
+
     .title {
         font-size: 2.5rem;
     }
 
-    .nextSectionBtn {
-        top: 1.3rem;
-        right: 1.5rem;
+    .cvButton {
+        width: auto;
+        padding: 10px 10px;
+        font-size: 0.9rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
     }
 
-    .cvButton {
-        padding: 10px 10px;
-        font-size: 0.85rem;
+    .nextSectionBtn {
+        display: none;
+    }
+    
+    .hollow {
+        color: var(--accent-color);
+        -webkit-text-stroke: 0px;
     }
 }

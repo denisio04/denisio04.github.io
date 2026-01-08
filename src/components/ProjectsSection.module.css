@@ -167,7 +167,11 @@
     }
 
     .nextSectionBtn {
-        top: 1.3rem;
-        right: 1.5rem;
+        display: none;
+    }
+    
+    .hollow {
+        color: var(--accent-color);
+        -webkit-text-stroke: 0px;
     }
 }

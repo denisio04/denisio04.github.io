@@ -29,7 +29,7 @@ function ProjectsSection({ onNavigate, t }) {
                 </div>
             
                 {t.list.map((project) => (
-                    <a href={project.link} key={project.id} className={styles.projectRow}>
+                    <a href={project.link} key={project.id} className={styles.projectRow} target="_blank">
                         <span className={styles.id}>{project.id}</span>
                         <span className={styles.name}>{project.title}</span>
                         <span className={styles.role}>{project.role}</span>
