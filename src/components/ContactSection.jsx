@@ -47,6 +47,7 @@ function ContactSection({ onNavigate, t }) {
                     <span className={styles.colTitle}>{t.headers.socials}</span>
                     <a href="https://github.com/denisio04" className={styles.link}>GitHub ↗</a>
                     <a href="https://x.com/_denis_dev_" className={styles.link}>Twitter ↗</a>
+                    <a href="https://wa.me/5356659558" className={styles.link} target="_blank" rel="noopener noreferrer">{t.whatsapp} ↗</a>
                 </div>
 
                 <div className={styles.infoCol}>
