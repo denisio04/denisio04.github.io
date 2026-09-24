@@ -52,7 +52,7 @@ export const translations = {
           role: "Design / Dev",
           tech: "Next.js 16, TypeScript, Prisma, Leaflet, Tailwind CSS",
           year: "2026",
-          link: "https://mipymap.vercel.app/",
+          link: "https://github.com/denisio04/mipymap",
         },
         {
           id: "02",
@@ -60,7 +60,7 @@ export const translations = {
           role: "Design / Dev",
           tech: "Next.js 14, TypeScript, Prisma, NextAuth.js, Zustand, Tailwind CSS",
           year: "2026",
-          link: "https://elpuntiko.vercel.app/",
+          link: "https://github.com/denisio04/el-puntiko",
         },
         {
           id: "03",
@@ -205,7 +205,7 @@ export const translations = {
           role: "Diseñador / Desarrollador",
           tech: "Next.js 16, TypeScript, Prisma, Leaflet, Tailwind CSS",
           year: "2026",
-          link: "https://mipymap.vercel.app/",
+          link: "https://github.com/denisio04/mipymap",
         },
         {
           id: "02",
@@ -213,7 +213,7 @@ export const translations = {
           role: "Diseñador / Desarrollador",
           tech: "Next.js 14, TypeScript, Prisma, NextAuth.js, Zustand, Tailwind CSS",
           year: "2026",
-          link: "https://elpuntiko.vercel.app/",
+          link: "https://github.com/denisio04/el-puntiko",
         },
         {
           id: "03",
