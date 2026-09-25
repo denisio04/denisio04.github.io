@@ -48,6 +48,22 @@ export const translations = {
       list: [
         {
           id: "01",
+          title: "TIENDA TRÉBOL",
+          role: "Design / Dev",
+          tech: "Next.js 16, TypeScript, Prisma, Supabase, CSS",
+          year: "2026",
+          link: "https://tiendatrebol.vercel.app/",
+        },
+        {
+          id: "02",
+          title: "MIPYMEGESTOR V2",
+          role: "Design / Dev",
+          tech: "React Native, Expo, TypeScript, Supabase, SQLite",
+          year: "2026",
+          link: "https://mipyme-gestor-web.vercel.app",
+        },
+        {
+          id: "03",
           title: "MIPYMAP",
           role: "Design / Dev",
           tech: "Next.js 16, TypeScript, Prisma, Leaflet, Tailwind CSS",
@@ -55,7 +71,7 @@ export const translations = {
           link: "https://github.com/denisio04/mipymap",
         },
         {
-          id: "02",
+          id: "04",
           title: "EL PUNTIKO",
           role: "Design / Dev",
           tech: "Next.js 14, TypeScript, Prisma, NextAuth.js, Zustand, Tailwind CSS",
@@ -63,7 +79,7 @@ export const translations = {
           link: "https://github.com/denisio04/el-puntiko",
         },
         {
-          id: "03",
+          id: "05",
           title: "CAFFY — BUSINESS APP LANDING",
           role: "Design / Dev",
           tech: "TypeScript, CSS, HTML",
@@ -71,7 +87,7 @@ export const translations = {
           link: "https://denisio04.github.io/caffy/",
         },
         {
-          id: "04",
+          id: "06",
           title: "MAP LOG",
           role: "Design / Dev",
           tech: "React Native, Expo, Zustand",
@@ -79,7 +95,7 @@ export const translations = {
           link: "https://github.com/denisio04/MAP_LOG",
         },
         {
-          id: "05",
+          id: "07",
           title: "FACTOS — URL SHORTENER",
           role: "Design / Dev",
           tech: "Next.js 15, Prisma, PostgreSQL, Tailwind CSS",
@@ -87,7 +103,7 @@ export const translations = {
           link: "https://factoss.netlify.app/",
         },
         {
-          id: "06",
+          id: "08",
           title: "PORTFOLIO V1",
           role: "Design / Dev",
           tech: "React, CSS Modules",
@@ -95,7 +111,7 @@ export const translations = {
           link: "https://denisio04.github.io/",
         },
         {
-          id: "07",
+          id: "09",
           title: "SOLAR CALCULATOR PRO",
           role: "Design / Dev",
           tech: "React, CSS Modules, Context API",
@@ -201,6 +217,22 @@ export const translations = {
       list: [
         {
           id: "01",
+          title: "TIENDA TRÉBOL",
+          role: "Diseñador / Desarrollador",
+          tech: "Next.js 16, TypeScript, Prisma, Supabase, CSS",
+          year: "2026",
+          link: "https://tiendatrebol.vercel.app/",
+        },
+        {
+          id: "02",
+          title: "MIPYMEGESTOR V2",
+          role: "Diseñador / Desarrollador",
+          tech: "React Native, Expo, TypeScript, Supabase, SQLite",
+          year: "2026",
+          link: "https://mipyme-gestor-web.vercel.app",
+        },
+        {
+          id: "03",
           title: "MIPYMAP",
           role: "Diseñador / Desarrollador",
           tech: "Next.js 16, TypeScript, Prisma, Leaflet, Tailwind CSS",
@@ -208,7 +240,7 @@ export const translations = {
           link: "https://github.com/denisio04/mipymap",
         },
         {
-          id: "02",
+          id: "04",
           title: "EL PUNTIKO",
           role: "Diseñador / Desarrollador",
           tech: "Next.js 14, TypeScript, Prisma, NextAuth.js, Zustand, Tailwind CSS",
@@ -216,7 +248,7 @@ export const translations = {
           link: "https://github.com/denisio04/el-puntiko",
         },
         {
-          id: "03",
+          id: "05",
           title: "CAFFY — BUSINESS APP LANDING",
           role: "Diseñador / Desarrollador",
           tech: "TypeScript, CSS, HTML",
@@ -224,7 +256,7 @@ export const translations = {
           link: "https://denisio04.github.io/caffy/",
         },
         {
-          id: "04",
+          id: "06",
           title: "MAP LOG",
           role: "Diseñador / Desarrollador",
           tech: "React Native, Expo, Zustand",
@@ -232,7 +264,7 @@ export const translations = {
           link: "https://github.com/denisio04/MAP_LOG",
         },
         {
-          id: "05",
+          id: "07",
           title: "FACTOS — URL SHORTENER",
           role: "Diseñador / Desarrollador",
           tech: "Next.js 15, Prisma, PostgreSQL, Tailwind CSS",
@@ -240,7 +272,7 @@ export const translations = {
           link: "https://factoss.netlify.app/",
         },
         {
-          id: "06",
+          id: "08",
           title: "PORTFOLIO V1",
           role: "Diseñador / Desarrollador",
           tech: "React, CSS Modules",
@@ -248,7 +280,7 @@ export const translations = {
           link: "https://denisio04.github.io/",
         },
         {
-          id: "07",
+          id: "09",
           title: "CALCULADORA SOLAR PRO",
           role: "Diseñador / Desarrollador",
           tech: "React, CSS Modules, Context API",
