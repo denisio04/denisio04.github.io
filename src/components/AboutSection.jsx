@@ -1,7 +1,7 @@
 import styles from './AboutSection.module.css';
 import profilePic from '../assets/profile-pic.jpg';
 
-function AboutSection( {onNavigate, t} ) {
+function AboutSection( {onNavigate, t, projectsCount} ) {
     return (
         <section id={styles.about}>
 
@@ -34,23 +34,19 @@ function AboutSection( {onNavigate, t} ) {
                     <p>
                         {t.text.p1_start} <strong>{t.text.p1_bold}</strong>{t.text.p1_end}
                     </p>
-                    <p>
-                        {t.text.p2_end}
-                    </p>
-
-                    <p className={styles.smallText}>
-                        {t.text.quote}
-                    </p>
+                    {t.text.paragraphs.map((paragraph, index) => (
+                        <p key={index}>{paragraph}</p>
+                    ))}
                 </div>
 
                 <div className={styles.stats}>
                     <div className={styles.statsElements}>
                         <div>
-                            <span className={styles.statNumber}>01</span>
+                            <span className={styles.statNumber}>02</span>
                             <span className={styles.statLabel}>{t.stats.years}</span>
                         </div>
                         <div>
-                            <span className={styles.statNumber}>02</span>
+                            <span className={styles.statNumber}>{String(projectsCount || 0).padStart(2, '0')}</span>
                             <span className={styles.statLabel}>{t.stats.projects}</span>
                         </div>
                     </div>

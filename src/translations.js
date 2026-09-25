@@ -134,13 +134,15 @@ export const translations = {
         p1_start: "I’m ",
         p1_bold: "Denis Rodriguez",
         p1_end:
-          ", a creative developer focused on merging clean code with architectural design principles.",
+          ", a frontend developer and freelance web designer from Cienfuegos, Cuba, focused on turning ideas into real, usable products.",
 
-        p2_end:
-          "My goal is to build interfaces that are not just functional, but visually striking and memorable.",
+        paragraphs: [
+          "I love programming. The best part isn’t just building things — it’s that every project brings a new concept to unlock: a cleaner component, a better architecture, a smarter database design. That constant learning is what keeps me going.",
 
-        quote:
-          "* I believe in learning by doing. Every line of code in this portfolio represents a new concept unlocked.",
+          "I care about solving real problems. I like to see a product come to life from the first line of code to the final deploy — and beyond, improving it with every iteration so it genuinely helps the people who use it.",
+
+          "I focus on the frontend: interfaces with React and Next.js, mobile apps with React Native and Expo. I’m also deeply interested in artificial intelligence and automation — I love building smart tools that save time and do the boring work for people.",
+        ],
       },
       stats: {
         years: "Years Exp.",
@@ -303,13 +305,15 @@ export const translations = {
         p1_start: "Soy ",
         p1_bold: "Denis Rodriguez",
         p1_end:
-          ", un desarrollador creativo enfocado en unir código limpio con principios de diseño arquitectónico.",
+          ", un desarrollador frontend y diseñador web freelance de Cienfuegos, Cuba, enfocado en convertir ideas en productos reales y útiles.",
 
-        p2_end:
-          "Mi meta es construir interfaces que no solo sean funcionales, sino visualmente impactantes.",
+        paragraphs: [
+          "Me encanta programar. Lo mejor no es solo construir cosas: cada proyecto trae un concepto nuevo por descubrir — un componente más limpio, una mejor arquitectura, un diseño de base de datos más inteligente. Ese aprendizaje constante es lo que me mantiene en movimiento.",
 
-        quote:
-          "* Creo en aprender haciendo. Cada línea de código en este portafolio representa un nuevo concepto desbloqueado.",
+          "Me importa resolver problemas reales. Me gusta ver un producto cobrar vida desde la primera línea de código hasta el deploy final — y seguir mejorándolo con cada iteración para que de verdad ayude a quienes lo usan.",
+
+          "Me enfoco en el frontend: interfaces con React y Next.js, apps móviles con React Native y Expo. Además me interesa mucho la inteligencia artificial y la automatización — me encanta construir herramientas inteligentes que ahorran tiempo y hacen el trabajo aburrido por la gente.",
+        ],
       },
       stats: {
         years: "Años Exp.",

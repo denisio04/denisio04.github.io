@@ -128,12 +128,6 @@
 }
 
 
-.smallText {
-    font-size: 0.9rem;
-    color: var(--tag-color);
-    font-style: italic;
-}
-
 .stats {
     display: flex;
     gap: 3rem;

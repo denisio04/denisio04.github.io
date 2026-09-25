@@ -1,16 +1,42 @@
-# React + Vite
+# Portafolio — Denis Rodriguez
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portafolio personal de [Denisio04](https://github.com/denisio04) — desarrollador
+frontend y diseñador web freelance. Sitio construido con **React 19 + Vite 7**.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Bilingüe**: inglés/español con selector de idioma
+- **Temas**: dark (por defecto) y light
+- **Secciones**: Home, Proyectos, Sobre mí y Contacto
+- **Contacto**: email (mailto) y WhatsApp
+- **SEO**: meta description, Open Graph y Twitter Card
+- **Deploy**: GitHub Pages vía `gh-pages`
 
-## React Compiler
+## Desarrollo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install     # instala dependencias
+npm run dev     # servidor de desarrollo → http://localhost:5173
+npm run build   # genera la build de producción en dist/
+npm run preview # previsualiza la build localmente
+```
 
-## Expanding the ESLint configuration
+## Publicar
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run deploy  # build + publish de dist/ en GitHub Pages
+```
+
+El sitio queda en: https://denisio04.github.io
+
+## Estructura
+
+```
+src/
+  App.jsx                 # estado global (sección activa, tema, idioma)
+  translations.js         # textos EN/ES (incluye el índice de proyectos)
+  components/             # una sección + sus estilos por componente
+public/
+  CV_Denis_Rodriguez_Frontend_Dev.pdf
+  icon.png
+```

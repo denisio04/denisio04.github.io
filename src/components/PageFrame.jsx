@@ -12,7 +12,7 @@ function PageFrame({ activeSection, onNavigate, t }) {
     } else if (activeSection === 'projects') {
         content = <ProjectsSection onNavigate={onNavigate} t={t.projects}/>;
     } else if (activeSection === 'about') {
-        content = <AboutSection onNavigate={onNavigate} t={t.about}/>;
+        content = <AboutSection onNavigate={onNavigate} t={t.about} projectsCount={t.projects.list.length}/>;
     } else if (activeSection === 'contact') {
         content = <ContactSection onNavigate={onNavigate} t={t.contact}/>;
     }

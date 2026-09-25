@@ -2,7 +2,7 @@ import styles from './ContactSection.module.css';
 
 function ContactSection({ onNavigate, t }) {
     
-    const email = "denis04.dev@gmail.com";
+    const email = "denis.dev.04@gmail.com";
     const subject = "Project Inquiry";
     const body = "Hi, I saw your portfolio and I would like to talk about...";
     
@@ -45,8 +45,8 @@ function ContactSection({ onNavigate, t }) {
             <div className={styles.infoGrid}>
                 <div className={styles.infoCol}>
                     <span className={styles.colTitle}>{t.headers.socials}</span>
-                    <a href="https://github.com/denisio04" className={styles.link}>GitHub ↗</a>
-                    <a href="https://x.com/_denis_dev_" className={styles.link}>Twitter ↗</a>
+                    <a href="https://github.com/denisio04" className={styles.link} target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                    <a href="https://x.com/_denis_dev_" className={styles.link} target="_blank" rel="noopener noreferrer">Twitter ↗</a>
                     <a href="https://wa.me/5356659558" className={styles.link} target="_blank" rel="noopener noreferrer">{t.whatsapp} ↗</a>
                 </div>
 
